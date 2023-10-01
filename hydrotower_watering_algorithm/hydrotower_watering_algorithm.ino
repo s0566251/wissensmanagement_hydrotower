@@ -121,9 +121,9 @@ void relayOff() {
   digitalWrite(relayPin, LOW);
 }
 
-void relayOnForXTime(int delaySeconds) {
+void relayOnForXTime(int Seconds) {
   if (!timerStarted) {
-    endTime = millis() + (delaySeconds * 1000UL);
+    endTime = millis() + (Seconds * 1000UL);
     timerStarted = true;
     relayOn();
   }
@@ -169,14 +169,12 @@ void determineWateringProgram(int moistureValue, int ultraSonicValue, float hATe
      hAHumidity >= 20 && hAHumidity <= 40) {
     relayOnForXTime(5);
   }
-
   else if (moistureValue >= 31 && moistureValue <= 120 &&
    ultraSonicValue >= 500 && ultraSonicValue <= 560 &&
     hATemperature >= 20 && hATemperature <= 40 &&
      hAHumidity >= 20 && hAHumidity <= 40) {
     relayOnForXTime(15);
   }
-
   else {
     Serial.println("No Condition applicable");
   }
