@@ -17,12 +17,12 @@ Adafruit_SHT31 sht31 = Adafruit_SHT31();
 #define SCREEN_ADDRESS 0x3C  // Address may be either 3C or 3d
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 
+// Ultrasonic
+Ultrasonic ultrasonic(12);
 
 // Moisture Sensor
 int MoistureSensorPin = A6;
 
-// Ultrasonic
-Ultrasonic ultrasonic(12);
 // Relay
 const int relayPin = 11;
 
