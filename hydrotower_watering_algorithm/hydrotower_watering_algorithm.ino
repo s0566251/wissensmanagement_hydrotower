@@ -21,7 +21,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 Ultrasonic ultrasonic(12);
 
 // Moisture Sensor
-int MoistureSensorPin = A6;
+const int MoistureSensorPin = A6;
 
 // Relay
 const int relayPin = 11;
