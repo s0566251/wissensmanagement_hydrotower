@@ -1,4 +1,3 @@
-#include <Wire.h>
 // Ultrasonic
 #include "Ultrasonic.h"
 
@@ -8,6 +7,7 @@
 #include <Adafruit_SSD1306.h>
 
 // I2C High Accuracy Temp&Humi
+#include <Wire.h>
 #include "Adafruit_SHT31.h"
 Adafruit_SHT31 sht31 = Adafruit_SHT31();
 
